@@ -36,7 +36,7 @@ class ToolsContainer extends Component {
     return(
       <div className="innerbox">
         <ToolCreator onAddTool={this.props.onAddTool} />
-        <ToolsDisplay toolList={this.props.toolList} lastMarketId={this.props.lastMarketId} newLocation={this.props.newLocation} totalCards={this.props.totalCards} onAddCard={this.props.onAddCard} onDeleteCard={this.props.onDeleteCard} percentTotal={this.props.percentTotal}/>
+        {/* <ToolsDisplay toolList={this.props.toolList} lastMarketId={this.props.lastMarketId} newLocation={this.props.newLocation} totalCards={this.props.totalCards} onAddCard={this.props.onAddCard} onDeleteCard={this.props.onDeleteCard} percentTotal={this.props.percentTotal}/> */}
       </div>
     );
   }
