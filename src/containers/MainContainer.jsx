@@ -31,9 +31,11 @@ class MainContainer extends Component {
       <div className="container">
         <Header />
           <ToolCreatorContainer />
+          <div className="extraOuter">
+            <h1 id="header">Most Beloved Tools</h1>
+          </div>
         <div className="outerBox">
-          <h1 id="header">Most Loved Tools</h1>
-          <ToolsDisplay allTools={this.props.allTools} onAddLike={this.props.onAddLike} onDeleteLike={this.props.onDeleteLike}/>
+              <ToolsDisplay allTools={this.props.allTools} onAddLike={this.props.onAddLike} onDeleteLike={this.props.onDeleteLike}/>
         </div>
           <Footer />
       </div>

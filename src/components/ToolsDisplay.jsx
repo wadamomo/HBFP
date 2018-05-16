@@ -16,8 +16,13 @@ import ToolDisplay from './ToolDisplay.jsx';
 const ToolsDisplay = (props) => {
   return(
     <div className="displayBox">
-        {props.allTools.map((el, i) => {
-          return <div className="singleTool" id={i} key={i}><ToolDisplay {...props} onAddLike={props.onAddLike} onDeleteLike={props.onDeleteLike} key={i} i={i} /></div>})}
+        {
+          props.allTools
+          .map((el, i) => {
+            console.log('hellooooo9')
+            console.log(props.allTools[i].toolLikes)
+            return <div id={i} key={i}><ToolDisplay {...props} onAddLike={props.onAddLike} onDeleteLike={props.onDeleteLike} key={i} i={i} /></div>})
+        }
     </div>
   );
 };
