@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
 body {
-    background: red;
+  font-family: Dosis;  
+  background-image: url("https://images.unsplash.com/photo-1520283451192-c3b05d7db25b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e0e6baa775fe93de35e4bfb8b5e6a018&auto=format&fit=crop&w=2100&q=80");
+}
+
+/* INHERIT */
+.outerBox {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 10px 15px 39px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+}
+
+.innerbox {
+  padding: 10px;
+  width:95%;
+  margin: 15px auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+}
+
+.displayBox {
+  overflow: overlay;
+  padding-top: 10px;
+}
+
+.marketBox {
+  padding: 5px;
+  width:30%;
+  margin: 5px 5px 13px 10px;
+  float:left;
+  font-size: .8em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
 }
 
 /* HEADER */
@@ -8,28 +41,29 @@ body {
             linear,
             left bottom,
             left top,
-            color-stop(0, rgb(35, 83, 122)),
-            color-stop(1, rgb(85, 132, 170))
+            color-stop(0, rgb(34, 34, 34)),
+            color-stop(1, rgb(78, 78, 78))
         );
     width: 100%;
     text-align: center;
-    height: 40px;
+    height: 80px;
     position: absolute;
     top: 0;
     left: 0;
     display: -ms-inline-grid;
+    color: #3A9AD8;
   }
   
   .left {
     position: absolute;
     float: left;
-    margin-left: 200px;
+    margin-left: 0px;
     background-image: -webkit-gradient(
             linear,
             left bottom,
             left top,
-            color-stop(0, rgb(23, 73, 114)),
-            color-stop(1, rgb(21, 67, 104))
+            color-stop(0, rgb(91, 91, 91)),
+            color-stop(1, rgb(55, 55, 55))
         );
     padding: 10px;
     border-right: 1px solid rgb(21, 67, 104);
@@ -37,12 +71,14 @@ body {
   }
   
   .right {
+    font-size: 1.3em;
     position: absolute;
     float: right;
     top: 0;
     right: 0;
-    margin-right: 200px;
-    height: 40px;
+    text-align: center;
+    margin-right: 0px;
+    height: 80px;
     border-right: 1px solid rgba(35, 83, 122, 0.486);
     border-left: 1px solid rgba(35, 83, 122, 0.479);
     width: 130px;
@@ -52,8 +88,8 @@ body {
     position: absolute;
     right: 70px;
     border-radius: 4px;
-    margin-top: 7px;
-    margin-right: 20px;
+    top: 28px;
+    margin-right: 15px;
   }
   
   .username {
@@ -63,5 +99,6 @@ body {
     font-weight: 450;
     color: rgba(238, 238, 238, 0.836);
     display: inline;
-    right: 6;
+    right: 13;
+    top: 31px;
   }
