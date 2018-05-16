@@ -6,13 +6,19 @@ export const addTool = (toolName, toolApp, toolType, toolDesc) => ({
   toolName, 
   toolApp, 
   toolType, 
-  toolDesc
+  toolDesc,
+  toolLikes: 0
 });
 
-// export const deleteCard = (index) => ({
-//   type: 'DELETE_CARD',
-//   index
-// });
+export const addLike = (index) => ({
+  type: 'ADD_LIKE',
+  index
+});
+
+export const deleteLike = (index) => ({
+  type: 'DELETE_LIKE',
+  index
+});
 
 // // add more action creators
 

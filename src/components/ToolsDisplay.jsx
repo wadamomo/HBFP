@@ -14,11 +14,10 @@ import ToolDisplay from './ToolDisplay.jsx';
 
 
 const ToolsDisplay = (props) => {
-  console.log(props.allTools)
   return(
     <div className="displayBox">
         {props.allTools.map((el, i) => {
-          return <div className="singleTool" id={i} key={i}><ToolDisplay {...props} key={i} i={i} /></div>})}
+          return <div className="singleTool" id={i} key={i}><ToolDisplay {...props} onAddLike={props.onAddLike} onDeleteLike={props.onDeleteLike} key={i} i={i} /></div>})}
     </div>
   );
 };

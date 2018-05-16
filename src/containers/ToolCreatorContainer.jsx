@@ -14,14 +14,7 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    // onAddCard: (index) => {
-    //   dispatch(actions.addCard(index))
-    // },
-    // onDeleteCard: (index) => {
-    //   dispatch(actions.deleteCard(index))
-    // },
     onAddTool: (toolName, toolApp, toolType, toolDesc) => {
-      console.log('adding tool')
       dispatch(actions.addTool(toolName, toolApp, toolType, toolDesc))
     }
   }

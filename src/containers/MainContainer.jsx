@@ -4,6 +4,7 @@ import ToolsDisplay from '../components/ToolsDisplay.jsx';
 import ToolCreatorContainer from './ToolCreatorContainer.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import * as actions from '../actions/actions';
 
 // import from child components...
 
@@ -14,7 +15,14 @@ const mapStateToProps = store => ({
 });
 //these are the functions, actions refer to here
 const mapDispatchToProps = dispatch => {
-  return {}
+  return {
+    onAddLike: (index) => {
+        dispatch(actions.addLike(index))
+      },
+      onDeleteLike: (index) => {
+        dispatch(actions.deleteLike(index))
+      }
+  }
 };
 
 class MainContainer extends Component {
@@ -22,11 +30,11 @@ class MainContainer extends Component {
     return(
       <div className="container">
         <Header />
+          <ToolCreatorContainer />
         <div className="outerBox">
           <h1 id="header">Most Loved Tools</h1>
-          <ToolsDisplay allTools={this.props.allTools}/>
+          <ToolsDisplay allTools={this.props.allTools} onAddLike={this.props.onAddLike} onDeleteLike={this.props.onDeleteLike}/>
         </div>
-          <ToolCreatorContainer />
           <Footer />
       </div>
     )

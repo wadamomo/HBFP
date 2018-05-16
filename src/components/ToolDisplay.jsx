@@ -7,8 +7,9 @@ const ToolDisplay = (props) => (
     <h4>Type: {props.allTools[props.i].toolType}</h4>
     <h4>Description: {props.allTools[props.i].toolDesc}</h4>
     <div className="voteButtons">
-      <button onClick={() => {props.onAddCard(props.i)}}>+</button>
-      <button onClick={() => {props.onDeleteCard(props.i)}}>-</button>
+      <h3>{props.allTools[props.i].toolLikes}</h3>
+      <button onClick={() => {console.log(`hello: ${props.i}`); {props.onAddLike(props.i)}}}>+</button>
+      <button onClick={() => {props.onDeleteLike(props.i)}}>-</button>
     </div>
   </div>
 );
