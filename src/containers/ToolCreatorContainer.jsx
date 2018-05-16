@@ -9,12 +9,7 @@ import ToolsDisplay from '../components/ToolsDisplay.jsx'
 
 const mapStateToProps = store => {
   // provide pertinent state here
-  return {
-  toolList: store.tools.toolList,
-  lastToolId: store.tools.lastToolId,
-  newLocation: store.tools.newLocation,
-  totalCards: store.tools.totalCards
-  }
+  return {}
 };
 
 const mapDispatchToProps = dispatch => {
@@ -25,21 +20,21 @@ const mapDispatchToProps = dispatch => {
     // onDeleteCard: (index) => {
     //   dispatch(actions.deleteCard(index))
     // },
-    onAddTool: location => {
-      dispatch(actions.addTool(location))
+    onAddTool: (toolName, toolApp, toolType, toolDesc) => {
+      console.log('adding tool')
+      dispatch(actions.addTool(toolName, toolApp, toolType, toolDesc))
     }
   }
 };
 
-class ToolsContainer extends Component {
+class ToolCreatorContainer extends Component {
   render() {
     return(
-      <div className="innerbox">
+      <div className="tool-creator-container">
         <ToolCreator onAddTool={this.props.onAddTool} />
-        {/* <ToolsDisplay toolList={this.props.toolList} lastMarketId={this.props.lastMarketId} newLocation={this.props.newLocation} totalCards={this.props.totalCards} onAddCard={this.props.onAddCard} onDeleteCard={this.props.onDeleteCard} percentTotal={this.props.percentTotal}/> */}
       </div>
     );
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToolsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ToolCreatorContainer);

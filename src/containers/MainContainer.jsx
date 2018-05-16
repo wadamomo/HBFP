@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TotalsDisplay from '../components/TotalsDisplay.jsx';
-import ToolsContainer from './ToolsContainer.jsx';
+import ToolsDisplay from '../components/ToolsDisplay.jsx';
+import ToolCreatorContainer from './ToolCreatorContainer.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 
@@ -10,7 +10,7 @@ import Footer from '../components/Footer.jsx';
 //take date from store, sends to props
 const mapStateToProps = store => ({
   // add pertinent state here...totalTools, total cards
-    totalTools: store.tools.totalTools
+    allTools: store.tools.allTools
 });
 //these are the functions, actions refer to here
 const mapDispatchToProps = dispatch => {
@@ -23,10 +23,10 @@ class MainContainer extends Component {
       <div className="container">
         <Header />
         <div className="outerBox">
-          <h1 id="header">MegaTool Loyalty Cards</h1>
-          {/* <TotalsDisplay totalCards={this.props.totalCards} totalTools={this.props.totalTools}/> */}
-          <ToolsContainer />
+          <h1 id="header">Most Loved Tools</h1>
+          <ToolsDisplay allTools={this.props.allTools}/>
         </div>
+          <ToolCreatorContainer />
           <Footer />
       </div>
     )

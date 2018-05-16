@@ -1,9 +1,12 @@
 // import actionType constants
 import * as types from '../constants/actionTypes'
 
-export const addTool = (index) => ({
+export const addTool = (toolName, toolApp, toolType, toolDesc) => ({
   type: 'ADD_TOOL',
-  index
+  toolName, 
+  toolApp, 
+  toolType, 
+  toolDesc
 });
 
 // export const deleteCard = (index) => ({

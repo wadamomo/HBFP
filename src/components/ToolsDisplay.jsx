@@ -14,10 +14,11 @@ import ToolDisplay from './ToolDisplay.jsx';
 
 
 const ToolsDisplay = (props) => {
+  console.log(props.allTools)
   return(
-    <div className="displayBox">tools display
-      {/* <h4>tools woop</h4>
-       {props.toolList.map((el, i) => <div id={i} key={i}> <MarketDisplay {...props} key={i} i={i} /> </div>)} */}
+    <div className="displayBox">
+        {props.allTools.map((el, i) => {
+          return <div className="singleTool" id={i} key={i}><ToolDisplay {...props} key={i} i={i} /></div>})}
     </div>
   );
 };

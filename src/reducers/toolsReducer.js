@@ -1,24 +1,45 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  totaltools: 0,
-//   totalCards: 0,
-//   toolList: [],
-//   lastMarketId: 10000,
-//   newLocation: [],
+  allTools: [{chicken: 1}],
 };
 
 
 const toolsReducer = (state = initialState, action) => {
   switch(action.type) {
     case 'ADD_TOOL':
+      console.log('adding tool')
       let newState = JSON.parse(JSON.stringify(state));
-    //   newState.totaltools++;
-    //   newState.newLocation.push(document.getElementById("location").value);
-    //   newState.toolList = newState.toolList.slice();
-    //   newState.toolList.push({toolId: newState.lastMarketId, location: action.location, cards: 0, percentTotal: 0});
-    //   newState.lastMarketId++;
+      // let newTool = {
+      //   toolName: document.getElementById("toolName").value,
+      //   toolApp: document.getElementById("toolApp").value,
+      //   toolType: document.getElementById("toolType").value,
+      //   toolDesc: document.getElementById("toolDesc").value,
+      // }
+      let newTool = {
+        toolName: action.toolName,
+        toolApp: action.toolApp,
+        toolType: action.toolType,
+        toolDesc: action.toolDesc,
+      }
+      newState.allTools = newState.allTools.slice();
+      newState.allTools.push(newTool)
+      console.log(newState)
       return newState;
+
+    default:
+      return state;
+  }
+};
+
+export default toolsReducer;
+
+
+
+
+
+
+
     // case 'ADD_CARD': 
     //   let addState = JSON.parse(JSON.stringify(state));
     //   addState.totalCards++;
@@ -37,9 +58,3 @@ const toolsReducer = (state = initialState, action) => {
     //     return el;
     //   })
     //   return delState;
-    default:
-      return state;
-  }
-};
-
-export default toolsReducer;
