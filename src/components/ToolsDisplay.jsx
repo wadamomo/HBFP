@@ -19,8 +19,6 @@ const ToolsDisplay = (props) => {
         {
           props.allTools
           .map((el, i) => {
-            console.log('hellooooo9')
-            console.log(props.allTools[i].toolLikes)
             return <div id={i} key={i}><ToolDisplay {...props} onAddLike={props.onAddLike} onDeleteLike={props.onDeleteLike} key={i} i={i} /></div>})
         }
     </div>
